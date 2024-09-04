@@ -6,8 +6,12 @@ body{
 .grid-layout{
     height: 650px;
     display: grid;
-    /* grid-template-columns: 80% auto;
-    grid-template-rows: 20% 10% 60% auto; */
+    grid-template-areas:  'cabecera cabecera'
+                        'menu menu'
+                        'contenido lateral'
+                        'footer footer';   
+    /* grid-template-columns: 80% auto; */
+    grid-template-rows: 20% 10% auto 10%;
     /* justify-content: stretch;  */
     background-color: lightgreen;
     border: 1px solid black;
@@ -25,25 +29,28 @@ body{
 .c1{
     /* grid-row: 1 / span 2;     */
     /* grid-column: 1 / span 2; */
+    grid-area: cabecera;
     background-color: lightblue;
 }
 
 .c2{
     /* grid-column: 1 / span 2; */
+    grid-area: menu;
     background-color: lightyellow;
 }
 
 .c3{
-   
+    grid-area: contenido;
     background-color: lightcoral;
 }
 
 .c4{
-    
+    grid-area: lateral;
     background-color: lightseagreen;
 }
 
 .c5{
     /* grid-column: 1 / span 2; */
+    grid-area: footer;
     background-color: lightpink;
 }
